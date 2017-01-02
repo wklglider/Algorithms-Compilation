@@ -3,7 +3,7 @@ public void quicksort(int[] array, int left, int right) {
 		int pivot = array[right];
 		int wall = left;
 		for (int i = left; i < right; i++) {
-			//Comparison happens only in the if statement
+			//Comparison happens only between the if parentheses
 			if (array[i] <= pivot) {
 				int temp = array[wall];
 				array[wall++] = array[i];
