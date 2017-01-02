@@ -11,7 +11,7 @@ public void quicksort(int[] array, int left, int right) {
 			}
 		}
 		int temp = array[wall];
-		array[wall ] = array[right];
+		array[wall] = array[right];
 		array[right] = temp;
 		quicksort(array, left, wall - 1);
 		quicksort(array, wall + 1, right);
