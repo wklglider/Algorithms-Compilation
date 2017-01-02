@@ -1,4 +1,4 @@
-public int randomizedSelect(int[] array, int left, int right, int index) {
+public int select(int[] array, int left, int right, int index) {
 	if (left == right) {
 		return array[left];
 	}
@@ -7,9 +7,9 @@ public int randomizedSelect(int[] array, int left, int right, int index) {
 	if (index == k) {
 		return array[wall];
 	} else if (index < k) {
-		return randomizedSelect(array, left, wall - 1, index);
+		return select(array, left, wall - 1, index);
 	} else {
-		return randomizedSelect(array, wall + 1, right, index - k);
+		return select(array, wall + 1, right, index - k);
 	}
 }
 
