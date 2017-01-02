@@ -1,9 +1,12 @@
 public void quicksort(int[] array, int left, int right) {
 	if (left < right) {
-		int pivot = array[right];
+		int randomPick = ThreadLocalRandom.current().nextInt(left, right + 1);
+		int pivot = array[randomPick];
+		array[randomPick] = array[right];
+		array[right] = pivot;
 		int wall = left;
 		for (int i = left; i < right; i++) {
-			//Comparison happens only between the if parentheses
+			//Comparison happens only between the two parentheses
 			if (array[i] <= pivot) {
 				int temp = array[wall];
 				array[wall++] = array[i];
