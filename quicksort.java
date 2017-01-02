@@ -6,8 +6,9 @@ public void quicksort(int[] array, int left, int right) {
 		array[right] = pivot;
 		int wall = left;
 		for (int i = left; i < right; i++) {
-			//Comparison happens only between the two parentheses
-			if (array[i] <= pivot) {
+			//Comparison happens only between the two parentheses.
+			//Descending order would be (array[i] > pivot).
+			if (array[i] < pivot) {
 				int temp = array[wall];
 				array[wall++] = array[i];
 				array[i] = temp;
