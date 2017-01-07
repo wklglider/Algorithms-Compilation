@@ -1,16 +1,16 @@
 public void topDownMergeSort(int[] A, int n) {
     int[] B = Arrays.copyOf(A, A.length);	// duplicate array A[] into B[]
-    topDownSplit(B, 0, n, A);			// sort data from B[] into A[]
+    topDownSplit(B, 0, n, A);			    // sort data from B[] into A[]
 }
 // Sort the given run of array A[] using array B[] as a source.
 // iBegin is inclusive; iEnd is exclusive (A[iEnd] is not in the set).
 public void topDownSplit(int[] B, int iBegin, int iEnd, int[] A) {
-    if(iEnd - iBegin < 2) return;		// if run size == 1, consider it sorted
+    if (iEnd - iBegin < 2) return;		    // if run size == 1, consider it sorted
     // split the run longer than 1 item into halves
     int iMiddle = (iEnd + iBegin) / 2;		// iMiddle = mid point
     // recursively sort both runs from array A[] into B[]
-    topDownSplit(A, iBegin,  iMiddle, B);	// sort the left  run
-    topDownSplit(A, iMiddle,    iEnd, B);	// sort the right run
+    topDownSplit(A, iBegin, iMiddle, B);	// sort the left  run
+    topDownSplit(A, iMiddle, iEnd, B);	    // sort the right run
     // merge the resulting runs from array B[] into A[]
     topDownMerge(B, iBegin, iMiddle, iEnd, A);
 }
