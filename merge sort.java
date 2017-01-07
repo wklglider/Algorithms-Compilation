@@ -14,7 +14,6 @@ public void topDownSplit(int[] B, int iBegin, int iEnd, int[] A) {
     // merge the resulting runs from array B[] into A[]
     topDownMerge(B, iBegin, iMiddle, iEnd, A);
 }
-
 //  Left source half is A[ iBegin:iMiddle-1].
 // Right source half is A[iMiddle:iEnd-1   ].
 // Result is            B[ iBegin:iEnd-1   ].
