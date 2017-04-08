@@ -7,7 +7,7 @@ public void quicksort(int[] array, int left, int right) {
 }
 
 public int randomizedPartition(int[] array, int left, int right) {
-	int randomPick = ThreadLocalRandom.current().nextInt(left, right + 1);
+	int randomPick = new Random().nextInt(right - left) + left;
 	int pivot = array[randomPick];
 	array[randomPick] = array[right];
 	array[right] = pivot;
